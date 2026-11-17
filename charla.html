@@ -162,11 +162,6 @@
 .s17 h2{font-size:132px;line-height:.9}
 .s17 .sign{margin-top:36px;display:flex;gap:10px}
 .s17 .sign .tag{font-size:22px}
-.s17 .qrs{position:absolute;left:56px;bottom:56px;display:flex;gap:20px;z-index:5}
-.s17 .qr{display:flex;align-items:center;gap:14px;margin:0;background:#fff;border:2px solid var(--ink);padding:9px 18px 9px 9px;box-shadow:7px 7px 0 var(--violet)}
-.s17 .qr img{display:block;width:110px;height:110px;image-rendering:pixelated}
-.s17 .qr b{display:block;white-space:nowrap;font:400 26px/1 var(--font-condensed);text-transform:uppercase}
-.s17 .qr small{display:block;margin-top:6px;font:700 12px/1.3 var(--font-mono);color:var(--ink-muted)}
 .s17 .orb{width:440px;height:440px;right:50px;top:160px}
 .s17 .llama{right:60px;bottom:0;height:480px}
 .adv .head h2{font-size:80px}
@@ -236,11 +231,6 @@
 .p17 .sign{margin-top:30px;display:flex;gap:10px}
 .p17 .sign .tag{font-size:22px}
 .p17 .tag--solid{background:var(--on-ink);color:var(--ink)}
-.p17 .qrs{position:absolute;right:56px;bottom:56px;display:flex;gap:20px;z-index:5}
-.p17 .qr{display:flex;align-items:center;gap:14px;margin:0;background:#fff;color:var(--ink);border:2px solid var(--ink);padding:9px 18px 9px 9px;box-shadow:7px 7px 0 var(--violet)}
-.p17 .qr img{display:block;width:110px;height:110px;image-rendering:pixelated}
-.p17 .qr b{display:block;white-space:nowrap;font:400 26px/1 var(--font-condensed);text-transform:uppercase}
-.p17 .qr small{display:block;margin-top:6px;font:700 12px/1.3 var(--font-mono);color:var(--ink-muted)}
 .s11 .already{position:absolute;right:56px;top:110px;z-index:6;transform:rotate(-4deg)}
 .ntwin{position:absolute;left:400px;right:32px;top:92px;background:#fff;border-radius:12px;overflow:hidden;border:1.5px solid #d9d8d3;box-shadow:12px 12px 0 var(--violet),0 18px 50px rgba(20,19,77,.2);z-index:3}
 .ntwin .bar0{height:34px;background:#f1f0ea;border-bottom:1px solid #e3e2de;display:flex;align-items:center;gap:7px;padding:0 14px}
@@ -250,7 +240,6 @@
 .photo-slide.active~.counter{color:var(--on-ink);text-shadow:0 0 6px #000;z-index:11}
 .tren h2{font-size:92px}
 .tren .stats{bottom:52px}
-.p17 .qrs{left:56px;right:auto;bottom:60px}
 .s10 .head{right:auto;width:520px}
 .s10 .head h2{font-size:84px}
 .s10 .head .lead{margin-top:14px;font-size:24px}
@@ -294,7 +283,6 @@
 .sC .lead{margin-top:20px;font-size:28px}
 .sC .wa{right:140px;top:64px;width:286px;height:604px;border:8px solid var(--ink);border-radius:34px;box-shadow:10px 10px 0 var(--violet);transform:rotate(2deg);z-index:2}
 .sC .wa img{object-fit:cover;object-position:top}
-.sC .orb{width:300px;height:300px;right:20px;bottom:-40px;z-index:0}
 .sC .bgv{position:absolute;inset:0;z-index:0;overflow:hidden;background:#111}
 .sC .bgv video,.sC .bgv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.1) blur(1px)}
 .sC .bgv img{display:none}
@@ -302,6 +290,12 @@
 .sC .brand img{filter:invert(1)}
 .sC .wa{border-color:#fff!important}
 @media (prefers-reduced-motion: reduce){.sC .bgv video{display:none}.sC .bgv img{display:block}}
+.p17 .handles{position:absolute;left:56px;bottom:64px;display:flex;gap:16px;z-index:5}
+.p17 .hd{background:rgba(10,10,10,.6);border:2px solid var(--on-ink);padding:14px 22px;backdrop-filter:blur(4px)}
+.p17 .hd small{display:block;font:700 12px/1 var(--font-mono);letter-spacing:3px;text-transform:uppercase;color:var(--violet-soft)}
+.p17 .hd b{display:block;margin-top:8px;font:400 40px/1 var(--font-condensed);color:#fff;letter-spacing:.3px}
+.slide.t-in .handles>*{animation:jd2-rise .5s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(.26s + var(--i,0)*.06s)}
+.slide.t-in .handles>:nth-child(2){--i:1}.slide.t-in .handles>:nth-child(3){--i:2}
 </style></head><body>
 <div class="stage">
 
@@ -488,11 +482,12 @@
   <div class="bar"></div><h2 class="display">Esto recién<br><span class="hl">empieza.</span></h2>
   <div class="sign"><span class="tag tag--solid">Franco Durán</span><span class="tag"><b>jujuy</b><span class="v" style="color:var(--violet-soft)">.dev</span></span></div>
  </div>
- <div class="qrs">
-  <figure class="qr"><img src="assets/qr/comunidad.svg" alt="QR a la comunidad de WhatsApp"><figcaption><b>Sumate a la comunidad</b><small>WhatsApp de jujuy.dev</small></figcaption></figure>
-  <figure class="qr"><img src="assets/qr/ig-jujuydev.svg" alt="QR al Instagram de jujuy.dev"><figcaption><b>IG de jujuy.dev</b><small>@jujuy.dev</small></figcaption></figure>
+ <div class="handles">
+  <div class="hd"><small>Sumate a la comunidad</small><b>jujuy.dev.ar</b></div>
+  <div class="hd"><small>Instagram</small><b>@jujuy.dev</b></div>
+  <div class="hd"><small>X</small><b>@fdurandev</b></div>
  </div>
- <aside class="notes"><p>Esto recién empieza. ¡Gracias!</p></aside>
+ <aside class="notes"><p>Esto recién empieza. ¡Gracias!</p><p>Para sumarse: jujuy.dev.ar · Instagram @jujuy.dev · X @fdurandev.</p></aside>
 </section>
 
  <div class="counter"></div><div class="progress"><i></i></div>
