@@ -2,7 +2,7 @@
 <title>jujuy.dev — el espacio que estamos construyendo · Franco Durán · Builder House X Salta</title>
 <meta name="description" content="jujuy.dev: el espacio que estamos construyendo donde no había nada. Franco Durán, founder. Builder House X · Salta.">
 <link rel="icon" href="assets/jujuydev-isotipo.png">
-<link rel="stylesheet" href="base.css?v=1"><link rel="stylesheet" href="charla.css?v=1">
+<link rel="stylesheet" href="base.css?v=2"><link rel="stylesheet" href="charla.css?v=2">
 <style>
 .dark .logo{filter:invert(1)}
 .it-list{list-style:none;display:flex;flex-direction:column;gap:0}
@@ -269,6 +269,26 @@
 .sU .lgbox img{max-width:92%;max-height:200px;object-fit:contain}
 .sU .lgbox img.up{height:190px;width:190px}
 .sU .card h3{font-size:46px}
+.sM .head{right:auto;width:740px}
+.sM .head h2{font-size:76px}
+.sM .head .lead{margin-top:8px;font-size:23px}
+.sM .amb{position:absolute;left:56px;top:300px;width:740px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sM .amb .card{height:196px;padding:16px 20px;display:flex;flex-direction:column}
+.sM .amb .lgbox{height:92px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.sM .amb .lgbox img{max-width:92%;max-height:64px;object-fit:contain}
+.sM .amb .lov{font:800 42px/1 var(--font-sans);letter-spacing:-1.5px;background:linear-gradient(90deg,#ff6b35,#f7468c 50%,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sM .amb .n{font-size:12px;letter-spacing:2px;white-space:nowrap}
+.sM .amb .card h3{font-size:32px;margin:6px 0 0}
+.sM .ntwin{left:auto;right:56px;width:380px;top:116px;margin:0;transform:rotate(1.5deg);box-shadow:7px 7px 0 var(--violet),0 14px 36px rgba(20,19,77,.16)}
+.sM .ntwin .bar0{height:24px}.sM .ntwin .dot{width:8px;height:8px}.sM .ntwin .url{font-size:10px;padding:3px 8px}
+.sM .ntwin figcaption{padding:8px 12px;font:600 13px/1.2 var(--font-sans);color:var(--ink-muted);border-top:1px solid #e3e2de}
+.sM .ntwin figcaption b{color:var(--violet);font-weight:800}
+.sM .mlabel{position:absolute;left:56px;bottom:168px;font-size:13px;color:var(--violet)}
+.sM .brands{position:absolute;left:56px;right:56px;bottom:62px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.sM .br{height:92px;border-radius:14px;background:var(--paper-raised);border:1.5px solid var(--line-soft);box-shadow:var(--shadow-tile);display:flex;align-items:center;justify-content:center;padding:16px 22px}
+.sM .br img{max-width:100%;max-height:54px;object-fit:contain}
+.sM .br.dk{background:var(--navy);border-color:var(--navy)}
+.sM .br.sq img{max-height:68px}
 </style></head><body>
 <div class="stage">
 
@@ -329,37 +349,29 @@
 </section>
 
 <!-- NOTION -->
-<section class="slide s10" data-title="Programas y marcas">
- <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Programas y marcas</div>
- <div class="head"><div class="bar"></div><h2 class="display">Marcas que<br><span class="hl">empujan</span></h2>
-  <div class="lead">Programas y sponsors, todo ordenado en Notion.</div>
-  <div class="tags"><span class="tag tag--solid"><b>105</b>&nbsp;programas y sponsors</span><span class="tag tag--violet"><b>10</b>&nbsp;done</span></div></div>
- <div class="ntwin">
+<section class="slide sM" data-title="Embajador y marcas">
+ <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Embajador · marcas</div>
+ <div class="head"><div class="bar"></div><h2 class="display">Ya soy <span class="hl">embajador</span></h2>
+  <div class="lead">Hoy ya soy <b>Builder Ambassador de SpaceXAI</b>, y embajador de <b>Lovable</b> y <b>Stellar</b>.</div></div>
+ <div class="amb">
+  <div class="card v step" data-step="1"><div class="lgbox"><img src="assets/logos/spacexai-wordmark.svg" alt="SpaceXAI"></div><div class="n">Builder Ambassador</div><h3>SpaceXAI</h3></div>
+  <div class="card step" data-step="1"><div class="lgbox"><span class="lov">Lovable</span></div><div class="n">Embajador</div><h3>Lovable</h3></div>
+  <div class="card step" data-step="1"><div class="lgbox"><img src="assets/logos/stellar.png" alt="Stellar"></div><div class="n">Embajador</div><h3>Stellar</h3></div>
+ </div>
+ <figure class="ntwin step" data-step="2">
   <div class="bar0"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Notion · Programas y sponsors</span></div>
   <img src="assets/notion-real-slide.png" alt="Captura real de la base Programas y sponsors en Notion">
- </div>
- <div class="brands">
+  <figcaption><b>105</b> programas y sponsors, ordenados en Notion</figcaption>
+ </figure>
+ <div class="mlabel mono step" data-step="3">Marcas que empujan</div>
+ <div class="brands step" data-step="3">
   <div class="br dk"><img src="assets/logos/argentina-space-logo-horizontal.png" alt="Argentina Space"></div>
   <div class="br"><img src="assets/logos/superteam-argentina.svg" alt="Superteam Argentina"></div>
   <div class="br"><img src="assets/logos/celo.svg" alt="Celo"></div>
   <div class="br"><img src="assets/logos/ripio.svg" alt="Ripio"></div>
   <div class="br sq"><img src="assets/logos/labitconf-icon.png" alt="LABITCONF"></div>
  </div>
- <aside class="notes"><p>Las marcas que nos empujan: Argentina Space, Superteam, Celo, Ripio, LABITCONF.</p><p>Y todo lo de programas y sponsors lo tengo ordenado en Notion: 105 entre programas y sponsors.</p></aside>
-</section>
-
-<!-- EMBAJADOR -->
-<section class="slide s11" data-title="Embajador">
- <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Embajador</div>
- <div class="head"><div class="bar"></div><h2 class="display">Ya soy <span class="hl">embajador</span></h2><div class="lead" style="margin-top:8px;font-size:26px">Hoy ya soy <b>Builder Ambassador de SpaceXAI</b>, y embajador de <b>Lovable</b> y <b>Stellar</b>.</div></div>
- <div class="sticker already">Ya es oficial</div>
- <div class="grid">
-  <div class="card v step" data-step="1"><div class="lgbox"><img src="assets/logos/spacexai-wordmark.svg" alt="SpaceXAI"></div><div><div class="n">Ya soy Builder Ambassador</div><h3>SpaceXAI</h3></div></div>
-  <div class="card step" data-step="2"><div class="lgbox"><span class="lov">Lovable</span></div><div><div class="n">Ya soy embajador</div><h3>Lovable</h3></div></div>
-  <div class="card step" data-step="3"><div class="lgbox"><img src="assets/logos/stellar.png" alt="Stellar"></div><div><div class="n">Ya soy embajador</div><h3>Stellar</h3></div></div>
- </div>
- <div class="foot step" data-step="4">Y cada programa trae <b>recursos y contactos</b> para la comunidad.</div>
- <aside class="notes"><p>Hoy ya soy Builder Ambassador de SpaceXAI, y también embajador de Lovable y de Stellar.</p></aside>
+ <aside class="notes"><p>Hoy ya soy Builder Ambassador de SpaceXAI, y también embajador de Lovable y de Stellar.</p><p>Todo lo de programas y sponsors lo tengo ordenado en Notion: 105 entre programas y sponsors.</p><p>Y las marcas que nos empujan: Argentina Space, Superteam, Celo, Ripio, LABITCONF.</p></aside>
 </section>
 
 <!-- CHARLAS -->
@@ -458,4 +470,4 @@
 
  <div class="counter"></div><div class="progress"><i></i></div>
 </div>
-<script src="deck.js?v=1"></script></body></html>
+<script src="deck.js?v=2"></script></body></html>

@@ -83,3 +83,35 @@ body{background:#000;font-family:var(--font-sans);color:var(--ink)}
  .slide,.slide.t-in,.slide.t-out{animation:none!important;transition:none!important}
  .deck-wipe{display:none}
 }
+
+/* ── transiciones v2: cross-fade + leve slide/scale de la slide, y entrada escalonada de elementos ── */
+.slide.t-in.t-fwd{animation:jd2-in-r .6s cubic-bezier(.22,1,.36,1) both}
+.slide.t-in.t-back{animation:jd2-in-l .6s cubic-bezier(.22,1,.36,1) both}
+.slide.t-out.t-fwd{animation:jd2-out-l .5s cubic-bezier(.4,0,.2,1) both}
+.slide.t-out.t-back{animation:jd2-out-r .5s cubic-bezier(.4,0,.2,1) both}
+.slide.t-in.t-jump{animation:jd2-fade-in .45s ease-out both}
+.slide.t-out.t-jump{animation:jd-fade-out .3s ease-out both}
+@keyframes jd2-in-r{from{opacity:0;transform:translate3d(48px,0,0) scale(.985)}to{opacity:1;transform:none}}
+@keyframes jd2-in-l{from{opacity:0;transform:translate3d(-48px,0,0) scale(.985)}to{opacity:1;transform:none}}
+@keyframes jd2-out-l{from{opacity:1;transform:none}to{opacity:0;transform:translate3d(-36px,0,0) scale(1.015)}}
+@keyframes jd2-out-r{from{opacity:1;transform:none}to{opacity:0;transform:translate3d(36px,0,0) scale(1.015)}}
+@keyframes jd2-fade-in{from{opacity:0;transform:scale(.99)}to{opacity:1;transform:none}}
+/* entrada escalonada (usa translate/scale individuales para no pisar rotaciones ni los pasos) */
+@keyframes jd2-rise{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+@keyframes jd2-pop{from{opacity:0;scale:.95}to{opacity:1;scale:1}}
+@keyframes jd2-zoom{from{scale:1.07}to{scale:1}}
+@keyframes jd2-bar{from{scale:0 1}to{scale:1 1}}
+.slide.t-in .bar{transform-origin:0 50%;animation:jd2-bar .45s .05s cubic-bezier(.22,1,.36,1) both}
+.slide.t-in :is(h1,h2){animation:jd2-rise .5s .08s cubic-bezier(.22,1,.36,1) both}
+.slide.t-in :is(.lead,.tags,.sub,.big,.swap,.sign,.copy>.mono,.q>.mono,.tl,.mlabel,.punch):not(.step:not(.on)){animation:jd2-rise .5s .18s cubic-bezier(.22,1,.36,1) both}
+.slide.t-in :is(.grid,.amb,.brands,.stats,.qrs,.right,.it-list)>:not(.step:not(.on)):not(.pop:not(.on)){animation:jd2-rise .5s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(.26s + var(--i,0)*.06s)}
+.slide.t-in :is(.grid,.amb,.brands,.stats,.qrs,.right,.it-list)>:nth-child(2){--i:1}
+.slide.t-in :is(.grid,.amb,.brands,.stats,.qrs,.right,.it-list)>:nth-child(3){--i:2}
+.slide.t-in :is(.grid,.amb,.brands,.stats,.qrs,.right,.it-list)>:nth-child(4){--i:3}
+.slide.t-in :is(.grid,.amb,.brands,.stats,.qrs,.right,.it-list)>:nth-child(5){--i:4}
+.slide.t-in :is(.half,.ntwin,.ticket,.gb,.sticker,.media.photo,.llama):not(.step:not(.on)){animation:jd2-pop .6s .22s cubic-bezier(.22,1,.36,1) both}
+.slide.t-in .bleed img,.slide.t-in .half img{animation:jd2-zoom .9s cubic-bezier(.22,1,.36,1) both}
+.slide.t-in .orb{animation:jd2-pop .7s .1s ease-out both}
+@media (prefers-reduced-motion: reduce){
+ .slide.t-in *,.slide.t-in,.slide.t-out{animation:none!important}
+}

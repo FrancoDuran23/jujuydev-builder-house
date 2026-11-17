@@ -76,7 +76,7 @@
     void stage.offsetWidth; // reinicia animaciones si se navega rápido
     slides[from].classList.add('t-out','t-'+m); slides[to].classList.add('t-in','t-'+m);
     if(m!=='jump'){ stage.classList.add('t-'+m); wipe.classList.add('go'); }
-    tT=setTimeout(()=>{ slides.forEach(el=>el.classList.remove('t-in','t-out','t-fwd','t-back','t-jump')); stage.classList.remove('t-fwd','t-back','t-jump'); wipe.classList.remove('go'); },520);
+    tT=setTimeout(()=>{ slides.forEach(el=>el.classList.remove('t-in','t-out','t-fwd','t-back','t-jump')); stage.classList.remove('t-fwd','t-back','t-jump'); wipe.classList.remove('go'); },950);
   }
   function render(silent){
     const eff=stepsOn()?st:maxStep[i];
