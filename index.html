@@ -272,19 +272,15 @@
 .sM .head{right:auto;width:740px}
 .sM .head h2{font-size:76px}
 .sM .head .lead{margin-top:8px;font-size:23px}
-.sM .amb{position:absolute;left:56px;top:340px;width:740px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.sM .amb .card{height:150px;padding:12px 18px;display:flex;flex-direction:column}
-.sM .amb .lgbox{height:62px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
-.sM .amb .lgbox img{max-width:88%;max-height:44px;object-fit:contain}
-.sM .amb .lov{font:800 34px/1 var(--font-sans);letter-spacing:-1.5px;background:linear-gradient(90deg,#ff6b35,#f7468c 50%,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sM .amb .n{font-size:12px;letter-spacing:2px;white-space:nowrap}
-.sM .amb .card h3{font-size:28px;margin:6px 0 0}
-.sM .ntwin{left:auto;right:56px;width:380px;top:250px;margin:0;transform:rotate(1.5deg);box-shadow:7px 7px 0 var(--violet),0 14px 36px rgba(20,19,77,.16)}
+.sM .ntwin{left:auto;right:56px;width:380px;top:230px;margin:0;transform:rotate(1.5deg);box-shadow:7px 7px 0 var(--violet),0 14px 36px rgba(20,19,77,.16)}
 .sM .ntwin .bar0{height:24px}.sM .ntwin .dot{width:8px;height:8px}.sM .ntwin .url{font-size:10px;padding:3px 8px}
 .sM .ntwin figcaption{padding:8px 12px;font:600 13px/1.2 var(--font-sans);color:var(--ink-muted);border-top:1px solid #e3e2de}
 .sM .ntwin figcaption b{color:var(--violet);font-weight:800}
-.sM .mlabel{position:absolute;left:56px;top:518px;font-size:13px;color:var(--violet)}
-.sM .brands{position:absolute;left:56px;top:542px;width:740px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sM .mlabel{position:absolute;left:56px;font-size:13px;color:var(--violet)}
+.sM .mlabel1{top:338px}.sM .mlabel2{top:462px}
+.sM .brands{position:absolute;left:56px;width:740px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sM .amb2{top:362px}.sM .brands2{top:486px}
+.sM .br .lov{font:800 26px/1 var(--font-sans);letter-spacing:-1px;background:linear-gradient(90deg,#ff6b35,#f7468c 50%,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
 .sM .br{height:72px;border-radius:12px;background:var(--paper-raised);border:1.5px solid var(--line-soft);box-shadow:var(--shadow-tile);display:flex;align-items:center;justify-content:center;padding:12px 16px}
 .sM .br img{max-width:100%;max-height:38px;object-fit:contain}
 .sM .br.dk{background:var(--navy);border-color:var(--navy)}
@@ -353,18 +349,19 @@
  <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Embajador · marcas</div>
  <div class="head"><div class="bar"></div><h2 class="display">Ya soy <span class="hl">embajador</span></h2>
   <div class="lead">Hoy ya soy <b>Builder Ambassador de SpaceXAI</b>, y embajador de <b>Lovable</b> y <b>Stellar</b>.</div></div>
- <div class="amb">
-  <div class="card v step" data-step="1"><div class="lgbox"><img src="assets/logos/spacexai-wordmark.svg" alt="SpaceXAI"></div><div class="n">Builder Ambassador</div><h3>SpaceXAI</h3></div>
-  <div class="card step" data-step="1"><div class="lgbox"><span class="lov">Lovable</span></div><div class="n">Embajador</div><h3>Lovable</h3></div>
-  <div class="card step" data-step="1"><div class="lgbox"><img src="assets/logos/stellar.png" alt="Stellar"></div><div class="n">Embajador</div><h3>Stellar</h3></div>
+ <div class="mlabel mlabel1 mono step" data-step="1">Embajador</div>
+ <div class="brands amb2 step" data-step="1">
+  <div class="br"><img src="assets/logos/spacexai-wordmark.svg" alt="SpaceXAI"></div>
+  <div class="br"><span class="lov">Lovable</span></div>
+  <div class="br"><img src="assets/logos/stellar.png" alt="Stellar"></div>
  </div>
  <figure class="ntwin step" data-step="2">
   <div class="bar0"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Notion · Programas y sponsors</span></div>
   <img src="assets/notion-real-slide.png" alt="Captura real de la base Programas y sponsors en Notion">
   <figcaption><b>105</b> programas y sponsors, ordenados en Notion</figcaption>
  </figure>
- <div class="mlabel mono step" data-step="3">Marcas que empujan</div>
- <div class="brands step" data-step="3">
+ <div class="mlabel mlabel2 mono step" data-step="3">Marcas que empujan</div>
+ <div class="brands brands2 step" data-step="3">
   <div class="br dk"><img src="assets/logos/argentina-space-logo-horizontal.png" alt="Argentina Space"></div>
   <div class="br"><img src="assets/logos/superteam-argentina.svg" alt="Superteam Argentina"></div>
   <div class="br"><img src="assets/logos/celo.svg" alt="Celo"></div>
