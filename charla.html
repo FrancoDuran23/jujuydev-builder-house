@@ -292,9 +292,16 @@
 .sC .brand img{height:64px}
 .sC .brand b{font:800 46px/1 var(--font-sans);letter-spacing:-1px}
 .sC .lead{margin-top:20px;font-size:28px}
-.sC .wa{right:96px;top:84px;width:400px;height:560px;border:8px solid var(--ink);border-radius:34px;box-shadow:10px 10px 0 var(--violet);transform:rotate(2deg);z-index:2}
+.sC .wa{right:140px;top:64px;width:286px;height:604px;border:8px solid var(--ink);border-radius:34px;box-shadow:10px 10px 0 var(--violet);transform:rotate(2deg);z-index:2}
 .sC .wa img{object-fit:cover;object-position:top}
 .sC .orb{width:300px;height:300px;right:20px;bottom:-40px;z-index:0}
+.sC .bgv{position:absolute;inset:0;z-index:0;overflow:hidden;background:#111}
+.sC .bgv video,.sC .bgv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.1) blur(1px)}
+.sC .bgv img{display:none}
+.sC .bgv:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.9) 0%,rgba(10,10,10,.78) 48%,rgba(10,10,10,.55) 100%)}
+.sC .brand img{filter:invert(1)}
+.sC .wa{border-color:#fff!important}
+@media (prefers-reduced-motion: reduce){.sC .bgv video{display:none}.sC .bgv img{display:block}}
 </style></head><body>
 <div class="stage">
 
@@ -405,6 +412,19 @@
  </div>
  <div class="orb"></div>
  <aside class="notes"><p>En Jujuy la adopción de tecnología es baja. Deja de ser un problema y pasa a ser una oportunidad: automatizaciones en pymes y en gobierno.</p></aside>
+</section>
+
+<!-- COLEJUY -->
+<section class="slide sC photo-slide" data-title="ColeJUY">
+ <div class="bgv" aria-hidden="true"><video muted autoplay loop playsinline preload="auto" poster="assets/video/colejuy-bg-poster.jpg"><source src="assets/video/colejuy-bg.mp4" type="video/mp4"></video><img src="assets/video/colejuy-bg-poster.jpg" alt=""></div>
+ <img class="logo" src="assets/jujuydev-logo-white.webp" alt="jujuy.dev"><div class="kicker">Producto</div>
+ <div class="left">
+  <div class="bar"></div><h2 class="display">Nació en<br>la <span class="hl">comunidad</span></h2>
+  <div class="brand"><img src="assets/logos/colejuy.png" alt=""><b>ColeJUY</b></div>
+  <div class="lead">La app de colectivos de <b>San Salvador de Jujuy</b>.</div>
+ </div>
+ <figure class="media wa" data-label="FOTO: ColeJUY en WhatsApp"><img src="assets/fotos/colejuy-whatsapp.jpg" alt="ColeJUY en WhatsApp"></figure>
+ <aside class="notes"><p>Y de la comunidad también salen productos: ColeJUY, la app de colectivos de San Salvador de Jujuy que hice.</p></aside>
 </section>
 
 <!-- PERSONAS -->
