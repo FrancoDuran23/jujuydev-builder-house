@@ -1,0 +1,443 @@
+<!doctype html><html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>jujuy.dev — el espacio que estamos construyendo · Franco Durán · Builder House X Salta</title>
+<meta name="description" content="jujuy.dev: el espacio que estamos construyendo donde no había nada. Franco Durán, founder. Builder House X · Salta.">
+<link rel="icon" href="assets/jujuydev-isotipo.png">
+<link rel="stylesheet" href="base.css?v=1"><link rel="stylesheet" href="charla.css?v=1">
+<style>
+.dark .logo{filter:invert(1)}
+.it-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.it{display:flex;gap:16px;align-items:baseline;font:600 24px/1.3 var(--font-sans);padding:12px 0;border-top:1.5px solid var(--line-soft)}
+.it i{font:700 15px/1 var(--font-mono);color:var(--violet);font-style:normal;min-width:30px}
+.it b{font-weight:800}
+.card{background:var(--paper-raised);border:1.5px solid var(--line-soft);border-radius:var(--radius-tile);box-shadow:var(--shadow-tile);padding:22px 24px}
+.card.v{border:2px solid var(--violet);box-shadow:8px 8px 0 var(--violet),var(--shadow-tile)}
+.card .n{font:700 14px/1 var(--font-mono);letter-spacing:3px;color:var(--violet)}
+.card h3{font:400 40px/1 var(--font-condensed);text-transform:uppercase;margin:10px 0 8px}
+.card p{font:500 19px/1.35 var(--font-sans);color:var(--ink-muted)}
+.card p b{color:var(--ink);font-weight:800}
+.howto .kicker{color:var(--violet)}
+.howto .grid{position:absolute;left:56px;right:56px;top:300px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.howto .head h2{font-size:72px}
+.howto .head .lead{margin-top:10px;font-size:26px;max-width:900px}
+/* 01 portada */
+.s01 .copy{position:absolute;left:56px;top:120px;width:720px;z-index:3}
+.s01 .tags{margin-bottom:26px}
+.s01 h1{font-size:104px;line-height:.92}
+.s01 .sub{margin-top:26px;font-size:28px}
+.s01 .orb{width:440px;height:440px;right:40px;top:150px;opacity:.95}
+.s01 .photo{right:120px;top:110px;width:400px;height:300px;z-index:2;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--violet);transform:rotate(2deg)}
+.s01 .llama{right:24px;bottom:0;height:320px}
+.s01 .where{position:absolute;left:56px;bottom:60px;display:flex;gap:8px}
+/* 02 hueco */
+.s02 .head h2{font-size:80px}
+.s02 .cols{position:absolute;left:56px;right:56px;top:290px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.s02 .col .mono{border-top:3px solid var(--ink);padding-top:10px;margin-bottom:6px}
+.s02 .col.v .mono{border-color:var(--violet);color:var(--violet)}
+.s02 .col.v .it{border-color:#e4dafa}
+.s02 .punch{position:absolute;left:56px;right:56px;bottom:54px;font:400 46px/1 var(--font-condensed);text-transform:uppercase}
+/* 03 por qué */
+.s03 .head h2{font-size:76px}
+.s03 .grid{position:absolute;left:56px;right:56px;top:250px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.s03 .card{min-height:250px}
+.s03 .strip{position:absolute;left:56px;right:56px;bottom:66px;height:80px;display:flex;gap:12px}
+.s03 .strip .media{position:relative;flex:1;height:80px;box-shadow:none;border-radius:12px}
+/* 04 crecimiento */
+.s04 .left{position:absolute;left:56px;top:110px;width:660px;z-index:3}
+.s04 .big{font:400 220px/.82 var(--font-condensed);color:var(--violet);margin-top:14px;letter-spacing:-4px}
+.s04 .big small{display:block;font-size:56px;line-height:1;color:var(--ink);letter-spacing:0;margin-top:6px}
+.s04 h2{font-size:64px}
+.s04 .lead{margin-top:22px;font-size:28px}
+.s04 .tl{position:absolute;left:56px;bottom:56px;display:flex;gap:8px}
+.s04 .photo{right:56px;top:110px;width:440px;height:520px;transform:rotate(1.5deg);border:2px solid var(--ink);box-shadow:10px 10px 0 var(--violet)}
+.s04 .orb{width:260px;height:260px;right:380px;top:420px;z-index:0}
+/* 05 eventos */
+.s05 .head h2{font-size:68px}
+.s05 .tbl{position:absolute;left:56px;right:56px;top:212px}
+.s05 .row{display:grid;grid-template-columns:70px 350px 1fr 170px;align-items:center;gap:14px;padding:7px 0;border-top:1.5px solid var(--line-soft);height:52px}
+.s05 .row .d{font:700 15px/1 var(--font-mono);color:var(--violet)}
+.s05 .row .t{font:700 19px/1.15 var(--font-sans)}
+.s05 .bars{position:relative;height:30px}
+.s05 .bars .r{position:absolute;left:0;top:0;height:30px;border:1.5px solid var(--ink);background:var(--paper-sunk)}
+.s05 .bars .c{position:absolute;left:0;top:0;height:30px;background:var(--violet)}
+.s05 .row .num{font:700 16px/1.2 var(--font-mono);text-align:right}
+.s05 .row .num b{color:var(--violet)}
+.s05 .row .num small{display:block;font-size:11px;color:var(--ink-muted);letter-spacing:1px}
+.s05 .legend{position:absolute;right:56px;top:150px;display:flex;gap:18px;font:700 13px/1 var(--font-mono);letter-spacing:2px;text-transform:uppercase;align-items:center}
+.s05 .legend span{display:inline-flex;align-items:center;gap:8px}
+.s05 .legend i{display:inline-block;width:22px;height:14px;border:1.5px solid var(--ink);background:var(--paper-sunk)}
+.s05 .legend i.c{background:var(--violet);border-color:var(--violet)}
+.s05 .foot{position:absolute;left:56px;bottom:62px;font:500 13px/1.3 var(--font-mono);letter-spacing:1px;color:var(--ink-muted)}
+/* 08 salir */
+.s08 .photo{right:56px;top:290px;width:400px;height:300px;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--violet)}
+.s08 .photo img{object-fit:contain;background:#0d1a4d}
+.s08 .grid{right:500px!important;grid-template-columns:1fr 1fr!important}
+.s08 .stat{position:absolute;right:56px;top:612px;width:400px;font:700 14px/1.3 var(--font-mono);letter-spacing:1px;color:var(--ink-muted)}
+.s08 .stat b{color:var(--violet)}
+/* 09 grok bot */
+.s09 .head{right:420px}
+.s09 .head h2{font-size:72px}
+.s09 .head .lead{margin-top:10px;font-size:26px}
+.s09 .gb{position:absolute;right:56px;top:96px;width:320px;height:160px;display:flex;align-items:center;gap:18px;background:var(--ink);color:var(--on-ink);border-radius:var(--radius-tile);padding:24px;box-shadow:10px 10px 0 var(--violet)}
+.s09 .gb img{width:90px;height:90px}
+.s09 .gb b{font:400 46px/1 var(--font-condensed);text-transform:uppercase;display:block}
+.s09 .gb small{font:700 12px/1.3 var(--font-mono);letter-spacing:2px;color:#bbb;text-transform:uppercase}
+.s09 .grid{position:absolute;left:56px;right:56px;top:316px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.s09 .card{min-height:250px}
+.s09 .card h3{font-size:36px}
+.s09 .foot{position:absolute;left:56px;bottom:44px;font:400 34px/1 var(--font-condensed);text-transform:uppercase}
+/* 10 notion */
+.s10 .head{right:auto;width:330px}
+.s10 .head h2{font-size:62px}
+.s10 .head .lead{margin-top:14px;font-size:22px}
+.s10 .head .tags{margin-top:20px;flex-direction:column;align-items:flex-start}
+.nt{position:absolute;left:420px;right:40px;top:84px;padding-bottom:22px;background:#fff;border-radius:12px;box-shadow:0 18px 50px rgba(20,19,77,.18);border:1px solid #e3e2de;overflow:hidden;font-family:var(--font-sans);color:#37352f}
+.nt .bar0{height:36px;border-bottom:1px solid #ededeb;display:flex;align-items:center;gap:8px;padding:0 14px;font:500 13px/1 var(--font-sans);color:#6b6a66}
+.nt .dot{width:10px;height:10px;border-radius:50%;background:#e3e2de}
+.nt .bar0 .crumb{margin-left:12px}
+.nt .body{padding:18px 26px 0}
+.nt h4{font:800 28px/1.1 var(--font-sans);color:#37352f;display:flex;align-items:center;gap:10px}
+.nt h4 .ck{width:26px;height:26px;border-radius:6px;background:#2f9e6a;color:#fff;font-size:17px;display:flex;align-items:center;justify-content:center}
+.nt .views{display:flex;gap:18px;margin-top:14px;border-bottom:1px solid #ededeb;font:600 13px/1 var(--font-sans);color:#787774}
+.nt .views span{padding-bottom:9px}
+.nt .views span.on{color:#37352f;border-bottom:2px solid #37352f}
+.nt .board{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.nt .colh{display:flex;align-items:center;gap:8px;font:600 13px/1 var(--font-sans);margin-bottom:8px}
+.nt .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:12px;font:600 12px/1 var(--font-sans)}
+.nt .pill:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.nt .p-gray{background:#efefed;color:#787774}.nt .p-blue{background:#e1ecfa;color:#2f6db5}.nt .p-green{background:#e2f1e8;color:#2f8a5a}
+.nt .cnt{color:#9b9a97;font-weight:600}
+.nt .lane{border-radius:8px;padding:8px;display:flex;flex-direction:column;gap:7px}
+.nt .lane.gray{background:#f7f7f5}.nt .lane.blue{background:#f3f7fc}.nt .lane.green{background:#f3f9f5}
+.nt .cd{background:#fff;border-radius:6px;box-shadow:0 1px 3px rgba(15,15,15,.12);padding:8px 10px;font:700 13px/1.25 var(--font-sans);color:#37352f}
+.nt .cd .pr{margin-top:6px;display:inline-block;padding:2px 7px;border-radius:4px;font:600 11px/1.2 var(--font-sans)}
+.nt .alta{background:#fbe4e4;color:#c4423c}.nt .medio{background:#fbf3db;color:#a07a12}.nt .baja{background:#e2f1e8;color:#2f8a5a}
+.nt .more{font:600 12px/1 var(--font-sans);color:#9b9a97;padding:4px 2px}
+/* 11 embajador */
+.s11 .head h2{font-size:80px}
+.s11 .grid{position:absolute;left:56px;right:56px;top:300px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.s11 .card{height:280px;display:flex;flex-direction:column;justify-content:space-between}
+.s11 .lgbox{height:140px;display:flex;align-items:center;justify-content:center}
+.s11 .lgbox img{max-width:90%;max-height:110px}
+.s11 .lov{font:800 66px/1 var(--font-sans);letter-spacing:-2px;background:linear-gradient(90deg,#ff6b35,#f7468c 50%,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.s11 .foot{position:absolute;left:56px;bottom:50px;font:600 24px/1.3 var(--font-sans)}
+/* 12 colejuy */
+.s12 .left{position:absolute;left:56px;top:110px;width:600px;z-index:3}
+.s12 h2{font-size:84px}
+.s12 .brand{display:flex;align-items:center;gap:16px;margin-top:24px}
+.s12 .brand img{height:64px}
+.s12 .brand b{font:800 44px/1 var(--font-sans);letter-spacing:-1px}
+.s12 .lead{margin-top:24px;font-size:28px}
+.s12 .phone{width:280px;height:540px;top:110px;border:8px solid var(--ink);border-radius:34px;box-shadow:10px 10px 0 var(--violet)}
+.s12 .phone img{object-fit:cover;object-position:top}
+.s12 .ph1{left:690px;transform:rotate(-3deg)}
+.s12 .ph2{left:950px;top:140px;transform:rotate(3deg)}
+/* 13 adopción */
+.s13 .left{position:absolute;left:56px;top:110px;width:640px}
+.s13 h2{font-size:78px}
+.s13 .swap{margin-top:30px;display:flex;flex-direction:column;gap:6px}
+.s13 .no{font:400 64px/1 var(--font-condensed);text-transform:uppercase;color:var(--ink-muted);text-decoration:line-through;text-decoration-thickness:6px;text-decoration-color:var(--violet)}
+.s13 .yes{font:400 96px/1 var(--font-condensed);text-transform:uppercase;color:var(--violet)}
+.s13 .right{position:absolute;left:740px;right:56px;top:150px;display:flex;flex-direction:column;gap:24px}
+.s13 .card h3{font-size:46px}
+.s13 .orb{width:300px;height:300px;right:-60px;bottom:-60px;opacity:.6}
+/* 14 personas */
+.s14 .left{position:absolute;left:56px;top:110px;width:640px;z-index:3}
+.s14 h2{font-size:76px}
+.s14 .big{font:400 220px/.85 var(--font-condensed);color:var(--violet);margin-top:20px}
+.s14 .lead{margin-top:14px;font-size:30px}
+.s14 .photo{right:56px;top:110px;width:480px;height:520px;transform:rotate(-1.5deg);border:2px solid var(--ink);box-shadow:-10px 10px 0 var(--violet)}
+/* 15-16 builder house */
+.s15 .left{position:absolute;left:56px;top:120px;width:780px;z-index:3}
+.s15 h2{font-size:92px}
+.s15 .lead{margin-top:28px;font-size:32px;max-width:700px}
+.s15 .orb{width:460px;height:460px;right:60px;top:140px}
+.s15 .sticker{right:120px;top:300px;font-size:44px}
+.s16 .q{position:absolute;left:56px;right:56px;top:170px;z-index:3}
+.s16 .q .mono{color:var(--violet-soft)}
+.s16 .q h2{font-size:150px;line-height:.9;margin-top:14px}
+.s16 .q .lead{margin-top:40px;font-size:38px;color:var(--on-ink)}
+.s16 .orb{width:380px;height:380px;right:-40px;top:-80px;opacity:.85}
+/* 17 cierre */
+.s17 .left{position:absolute;left:56px;top:120px;width:700px;z-index:3}
+.s17 h2{font-size:132px;line-height:.9}
+.s17 .sign{margin-top:36px;display:flex;gap:10px}
+.s17 .sign .tag{font-size:22px}
+.s17 .qrs{position:absolute;left:56px;bottom:56px;display:flex;gap:20px;z-index:5}
+.s17 .qr{display:flex;align-items:center;gap:14px;margin:0;background:#fff;border:2px solid var(--ink);padding:9px 18px 9px 9px;box-shadow:7px 7px 0 var(--violet)}
+.s17 .qr img{display:block;width:110px;height:110px;image-rendering:pixelated}
+.s17 .qr b{display:block;white-space:nowrap;font:400 26px/1 var(--font-condensed);text-transform:uppercase}
+.s17 .qr small{display:block;margin-top:6px;font:700 12px/1.3 var(--font-mono);color:var(--ink-muted)}
+.s17 .orb{width:440px;height:440px;right:50px;top:160px}
+.s17 .llama{right:60px;bottom:0;height:480px}
+.adv .head h2{font-size:80px}
+.adv .grid{position:absolute;left:56px;right:56px;top:320px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.adv .card{min-height:200px}
+.adv .punch{position:absolute;left:56px;bottom:50px;font:400 50px/1 var(--font-condensed);text-transform:uppercase}
+.s3c .left{position:absolute;left:56px;top:110px;width:640px;z-index:3}
+.s3c h2{font-size:74px}
+.s3c .it-list{margin-top:26px}
+.s3c .photo{right:56px;top:110px;width:470px;height:520px;transform:rotate(1.5deg);border:2px solid var(--ink);box-shadow:10px 10px 0 var(--violet)}
+
+/* ── v2: fotos full-bleed ── */
+.bleed{position:absolute;inset:0;z-index:0}
+.bleed img{width:100%;height:100%;object-fit:cover;display:block}
+.bleed:after{content:"";position:absolute;inset:0}
+.shade-l:after{background:linear-gradient(90deg,rgba(10,10,10,.88) 0%,rgba(10,10,10,.7) 42%,rgba(10,10,10,.1) 75%)}
+.shade-b:after{background:linear-gradient(180deg,rgba(10,10,10,.55) 0%,rgba(10,10,10,.35) 35%,rgba(10,10,10,.85) 100%)}
+.photo-slide{color:var(--on-ink)}
+.photo-slide .hl{color:var(--violet-soft)}
+.photo-slide .bar{background:var(--on-ink)}
+.photo-slide .kicker{color:var(--on-ink)}
+.photo-slide .tag{border-color:var(--on-ink)}
+.p01 .copy{position:absolute;left:56px;top:150px;width:760px;z-index:3}
+.p01 h1{font-size:108px;line-height:.92}
+.p01 .tags{margin-bottom:26px}
+.p01 .sub{margin-top:26px;font-size:28px}
+.p01 .tag--solid{background:var(--on-ink);color:var(--ink)}
+.p03 .head h2{font-size:76px}
+.p03 .grid{position:absolute;left:56px;right:56px;bottom:70px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;z-index:3}
+.p03 .card h3{font-size:31px}.p03 .card p{font-size:17px}.p03 .card{padding:20px 18px}
+.p03 .card{min-height:230px;background:rgba(255,255,255,.96);color:var(--ink)}
+.p03 .card .hl{color:var(--violet)}
+.p03 .head{z-index:3}
+.p06 .half{position:absolute;right:0;top:0;bottom:0;width:560px;z-index:0}
+.p06 .half img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.p06 .left{position:absolute;left:56px;top:110px;width:600px;z-index:3}
+.p06 .big{font:400 220px/.82 var(--font-condensed);color:var(--violet);margin-top:14px;letter-spacing:-4px}
+.p06 .big small{display:block;font-size:56px;line-height:1;color:var(--ink);letter-spacing:0;margin-top:6px}
+.p06 h2{font-size:64px}
+.p06 .lead{margin-top:22px;font-size:28px}
+.p06 .tl{position:absolute;left:56px;bottom:56px;display:flex;gap:8px}
+.p05 .half{position:absolute;right:0;top:0;bottom:0;width:560px;z-index:0}
+.p05 .half img{width:100%;height:100%;object-fit:cover;object-position:55% 50%}
+.p05 .left{position:absolute;left:56px;top:110px;width:600px;z-index:3}
+.p05 h2{font-size:72px}
+.p05 .it-list{margin-top:26px}
+.p14 .half{position:absolute;right:0;top:0;bottom:0;width:560px;z-index:0}
+.p14 .half img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.p14 .left{position:absolute;left:56px;top:110px;width:600px;z-index:3}
+.p14 h2{font-size:76px}
+.p14 .big{font:400 220px/.85 var(--font-condensed);color:var(--violet);margin-top:20px}
+.p14 .lead{margin-top:14px;font-size:30px}
+.tren .copy{position:absolute;left:56px;top:96px;width:780px;z-index:3}
+.tren .mono{color:#ffd28a}
+.tren h2{font-size:100px;line-height:.9;margin-top:14px}
+.tren h2 .hl{color:#ffb35c}
+.tren .sub{margin-top:20px;font:600 26px/1.3 var(--font-sans)}
+.tren .stats{position:absolute;left:56px;bottom:58px;display:flex;gap:16px;z-index:3}
+.tren .st{background:rgba(10,10,10,.6);border:2px solid #ffb35c;padding:14px 22px;backdrop-filter:blur(4px)}
+.tren .st b{display:block;font:400 64px/1 var(--font-condensed);color:#fff}
+.tren .st small{display:block;margin-top:6px;font:700 13px/1 var(--font-mono);letter-spacing:3px;text-transform:uppercase;color:#ffd28a}
+.tren .ticket{position:absolute;right:48px;top:110px;width:400px;height:200px;z-index:3;border:3px solid #fff;box-shadow:10px 10px 0 #ffb35c;transform:rotate(3deg);border-radius:12px;overflow:hidden}
+.tren .ticket img{width:100%;height:100%;object-fit:cover}
+.tren .bleed img{object-position:50% 60%}
+.p17 .left{position:absolute;left:56px;top:110px;width:760px;z-index:3}
+.p17 h2{font-size:140px;line-height:.9}
+.p17 .sign{margin-top:30px;display:flex;gap:10px}
+.p17 .sign .tag{font-size:22px}
+.p17 .tag--solid{background:var(--on-ink);color:var(--ink)}
+.p17 .qrs{position:absolute;right:56px;bottom:56px;display:flex;gap:20px;z-index:5}
+.p17 .qr{display:flex;align-items:center;gap:14px;margin:0;background:#fff;color:var(--ink);border:2px solid var(--ink);padding:9px 18px 9px 9px;box-shadow:7px 7px 0 var(--violet)}
+.p17 .qr img{display:block;width:110px;height:110px;image-rendering:pixelated}
+.p17 .qr b{display:block;white-space:nowrap;font:400 26px/1 var(--font-condensed);text-transform:uppercase}
+.p17 .qr small{display:block;margin-top:6px;font:700 12px/1.3 var(--font-mono);color:var(--ink-muted)}
+.s11 .already{position:absolute;right:56px;top:110px;z-index:6;transform:rotate(-4deg)}
+.ntwin{position:absolute;left:400px;right:32px;top:92px;background:#fff;border-radius:12px;overflow:hidden;border:1.5px solid #d9d8d3;box-shadow:12px 12px 0 var(--violet),0 18px 50px rgba(20,19,77,.2);z-index:3}
+.ntwin .bar0{height:34px;background:#f1f0ea;border-bottom:1px solid #e3e2de;display:flex;align-items:center;gap:7px;padding:0 14px}
+.ntwin .dot{width:11px;height:11px;border-radius:50%}.ntwin .r{background:#ff5f57}.ntwin .y{background:#febc2e}.ntwin .g{background:#28c840}
+.ntwin .url{margin-left:14px;flex:1;background:#fff;border-radius:6px;padding:4px 12px;font:600 12px/1 var(--font-sans);color:#6b6a66}
+.ntwin img{display:block;width:100%;height:auto}
+.photo-slide.active~.counter{color:var(--on-ink);text-shadow:0 0 6px #000;z-index:11}
+.tren h2{font-size:92px}
+.tren .stats{bottom:52px}
+.p17 .qrs{left:56px;right:auto;bottom:60px}
+.s10 .head{right:auto;width:520px}
+.s10 .head h2{font-size:84px}
+.s10 .head .lead{margin-top:14px;font-size:24px}
+.s10 .head .tags{margin-top:18px;flex-direction:row}
+.s10 .ntwin{left:auto;right:56px;width:560px;top:110px;transform:rotate(1.5deg);box-shadow:8px 8px 0 var(--violet),0 14px 36px rgba(20,19,77,.16)}
+.s10 .ntwin .bar0{height:26px}.s10 .ntwin .dot{width:9px;height:9px}.s10 .ntwin .url{font-size:11px;padding:3px 10px}
+.s10 .brands{position:absolute;left:56px;right:56px;bottom:62px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.s10 .br{height:110px;border-radius:14px;background:var(--paper-raised);border:1.5px solid var(--line-soft);box-shadow:var(--shadow-tile);display:flex;align-items:center;justify-content:center;padding:18px 22px}
+.s10 .br img{max-width:100%;max-height:64px;object-fit:contain}
+.s10 .br.dk{background:var(--navy);border-color:var(--navy)}
+.s10 .br.sq img{max-height:80px}
+</style></head><body>
+<div class="stage">
+
+<!-- 01 PORTADA -->
+<section class="slide p01 photo-slide" data-title="Portada">
+ <figure class="bleed shade-l"><img src="assets/fotos/hd/portada.jpg" alt="Comunidad jujuy.dev en Cabildo Tech"></figure>
+ <img class="logo" src="assets/jujuydev-logo-white.webp" alt="jujuy.dev"><div class="kicker">Builder House X · Salta</div>
+ <div class="copy">
+  <div class="tags"><span class="tag"><b>Jujuy</b><span class="v" style="color:var(--violet-soft)">Dev</span></span><span class="tag tag--solid">Comunidad tech</span></div>
+  <div class="bar"></div>
+  <h1 class="display">El espacio que<br>construimos donde<br><span class="hl">no había nadie</span></h1>
+  <div class="lead sub"><b>Franco Durán</b> · founder de jujuy.dev</div>
+ </div>
+ <aside class="notes"><p>¡Buenas! Soy Franco Durán, founder de jujuy.dev.</p><p>Hoy les quiero contar sobre el espacio que estamos construyendo en Jujuy, donde antes no había nadie.</p></aside>
+</section>
+
+<!-- 03 POR QUÉ COMUNIDAD -->
+<section class="slide p03 photo-slide" data-title="Ventajas de tener comunidad">
+ <figure class="bleed shade-b"><img src="assets/fotos/hd/comunidad.jpg" alt="Meetup de jujuy.dev"></figure>
+ <img class="logo" src="assets/jujuydev-logo-white.webp" alt="jujuy.dev"><div class="kicker">Ventajas</div>
+ <div class="head"><div class="bar"></div><h2 class="display">¿Para qué tener una <span class="hl">comunidad</span>?</h2></div>
+ <div class="grid">
+  <div class="card step" data-step="1"><div class="n">01</div><h3>Pertenencia</h3><p>Tener un lugar y <b>gente que habla tu idioma</b>.</p></div>
+  <div class="card step" data-step="2"><div class="n">02</div><h3>Aprender juntos</h3><p>Lo que sabe una persona <b>lo aprende el grupo</b>.</p></div>
+  <div class="card step" data-step="3"><div class="n">03</div><h3>Contactos</h3><p>Conocer a <b>quienes hacen tecnología en Jujuy</b>.</p></div>
+  <div class="card step" data-step="4"><div class="n">04</div><h3>Oportunidades</h3><p>Laburos, eventos, programas: <b>todo empieza por conocerse</b>.</p></div>
+  <div class="card v step" data-step="5"><div class="n">05</div><h3>Abre negocios</h3><p>Cuando saben <b>qué hacés</b>, te llaman. Socios y <b>productos</b> salen de una charla.</p></div>
+ </div>
+ <aside class="notes"><p>¿Para qué sirve tener una comunidad? Pertenencia: tener un lugar. Aprender juntos. Contactos: conocer a la gente de la escena tech de Jujuy. Oportunidades: casi todo empieza por conocerse. Y también abre negocios: cuando la gente sabe qué hacés, te llaman, encontrás socios y salen productos.</p></aside>
+</section>
+
+<!-- CRECIMIENTO -->
+<section class="slide p06" data-title="Crecimiento">
+ <figure class="half"><img src="assets/fotos/hd/crecimiento.jpg" alt="Auditorio lleno en un evento de jujuy.dev"></figure>
+ <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev">
+ <div class="left">
+  <div class="bar"></div><h2 class="display">En menos de <span class="hl">3 meses</span></h2>
+  <div class="big step" data-step="1">+700<small>miembros</small></div>
+  <div class="lead step" data-step="2">De un primer meetup a <b>una comunidad que no para de crecer</b>.</div>
+ </div>
+ <div class="tl"><span class="tag tag--solid">3/9/2026 · Meet Up #1</span><span class="tag">Hoy · +700</span></div>
+ <aside class="notes"><p>El primer meetup fue el 3 de septiembre de 2026. En menos de 3 meses somos más de 700 miembros.</p></aside>
+</section>
+
+<!-- GROK BOT -->
+<section class="slide s09" data-title="Cómo lo llevo">
+ <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Cómo lo llevo</div>
+ <div class="head"><div class="bar"></div><h2 class="display">Un equipo de <span class="hl">agentes</span></h2>
+  <div class="lead">Grok Bot es la herramienta con la que tengo todo ordenado.</div></div>
+ <div class="gb"><img src="assets/logos/grokbot.png" alt="Grok Bot"><div><b>Grok Bot</b><small>mi equipo de agentes</small></div></div>
+ <div class="grid">
+  <div class="card step" data-step="1"><div class="n">01</div><h3>Lumas</h3><p>Arma y lleva los <b>eventos en Luma</b>.</p></div>
+  <div class="card step" data-step="2"><div class="n">02</div><h3>Sponsors</h3><p>Toma las <b>notas de cada sponsor</b>.</p></div>
+  <div class="card step" data-step="3"><div class="n">03</div><h3>Scan diario</h3><p>Busca todos los días <b>programas de embajadores</b>.</p></div>
+  <div class="card v step" data-step="4"><div class="n">04</div><h3>La web</h3><p>Cambia el sitio de jujuy.dev <b>con PRs</b>.</p></div>
+ </div>
+ <aside class="notes"><p>¿Cómo llevo todo esto? Con Grok Bot. Tengo un equipo de agentes: uno arma los Lumas, otro toma notas de sponsors, otro escanea todos los días programas de embajadores y otro mantiene la web con PRs.</p></aside>
+</section>
+
+<!-- NOTION -->
+<section class="slide s10" data-title="Programas y marcas">
+ <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Programas y marcas</div>
+ <div class="head"><div class="bar"></div><h2 class="display">Marcas que<br><span class="hl">empujan</span></h2>
+  <div class="lead">Programas y sponsors, todo ordenado en Notion.</div>
+  <div class="tags"><span class="tag tag--solid"><b>105</b>&nbsp;programas y sponsors</span><span class="tag tag--violet"><b>10</b>&nbsp;done</span></div></div>
+ <div class="ntwin">
+  <div class="bar0"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Notion · Programas y sponsors</span></div>
+  <img src="assets/notion-real-slide.png" alt="Captura real de la base Programas y sponsors en Notion">
+ </div>
+ <div class="brands">
+  <div class="br dk"><img src="assets/logos/argentina-space-logo-horizontal.png" alt="Argentina Space"></div>
+  <div class="br"><img src="assets/logos/superteam-argentina.svg" alt="Superteam Argentina"></div>
+  <div class="br"><img src="assets/logos/celo.svg" alt="Celo"></div>
+  <div class="br"><img src="assets/logos/ripio.svg" alt="Ripio"></div>
+  <div class="br sq"><img src="assets/logos/labitconf-icon.png" alt="LABITCONF"></div>
+ </div>
+ <aside class="notes"><p>Las marcas que nos empujan: Argentina Space, Superteam, Celo, Ripio, LABITCONF.</p><p>Y todo lo de programas y sponsors lo tengo ordenado en Notion: 105 entre programas y sponsors.</p></aside>
+</section>
+
+<!-- EMBAJADOR -->
+<section class="slide s11" data-title="Embajador">
+ <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Embajador</div>
+ <div class="head"><div class="bar"></div><h2 class="display">Ya soy <span class="hl">embajador</span></h2><div class="lead" style="margin-top:8px;font-size:26px">Hoy ya soy <b>Builder Ambassador de SpaceXAI</b>, y embajador de <b>Lovable</b> y <b>Stellar</b>.</div></div>
+ <div class="sticker already">Ya es oficial</div>
+ <div class="grid">
+  <div class="card v step" data-step="1"><div class="lgbox"><img src="assets/logos/spacexai-wordmark.svg" alt="SpaceXAI"></div><div><div class="n">Ya soy Builder Ambassador</div><h3>SpaceXAI</h3></div></div>
+  <div class="card step" data-step="2"><div class="lgbox"><span class="lov">Lovable</span></div><div><div class="n">Ya soy embajador</div><h3>Lovable</h3></div></div>
+  <div class="card step" data-step="3"><div class="lgbox"><img src="assets/logos/stellar.png" alt="Stellar"></div><div><div class="n">Ya soy embajador</div><h3>Stellar</h3></div></div>
+ </div>
+ <div class="foot step" data-step="4">Y cada programa trae <b>recursos y contactos</b> para la comunidad.</div>
+ <aside class="notes"><p>Hoy ya soy Builder Ambassador de SpaceXAI, y también embajador de Lovable y de Stellar.</p></aside>
+</section>
+
+<!-- ADOPCIÓN -->
+<section class="slide s13" data-title="Baja adopción = oportunidad">
+ <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Jujuy</div>
+ <div class="left">
+  <div class="bar"></div><h2 class="display">Baja adopción de<br>tecnología en Jujuy</h2>
+  <div class="swap"><span class="no step" data-step="1">Problema</span><span class="yes step" data-step="2">Oportunidad</span></div>
+ </div>
+ <div class="right">
+  <div class="card step" data-step="3"><div class="n">01</div><h3>Pymes</h3><p>Automatizar <b>lo que hoy se hace a mano</b>.</p></div>
+  <div class="card v step" data-step="4"><div class="n">02</div><h3>Gobierno</h3><p>Automatizaciones para <b>trámites y procesos</b>.</p></div>
+ </div>
+ <div class="orb"></div>
+ <aside class="notes"><p>En Jujuy la adopción de tecnología es baja. Deja de ser un problema y pasa a ser una oportunidad: automatizaciones en pymes y en gobierno.</p></aside>
+</section>
+
+<!-- PERSONAS -->
+<section class="slide p14" data-title="Personas">
+ <figure class="half"><img src="assets/fotos/hd/personas.jpg" alt="Meetup de jujuy.dev"></figure>
+ <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev">
+ <div class="left">
+  <div class="bar"></div><h2 class="display">Abrimos puertas<br>a <span class="hl">gente joven</span></h2>
+  <div class="big step" data-step="1">+10</div>
+  <div class="lead step" data-step="2">personas consiguieron laburo <b>contando lo que aprendieron en la comunidad</b>.</div>
+ </div>
+ <aside class="notes"><p>Le abrimos puertas a gente joven: más de 10 personas consiguieron laburo contando lo que aprendieron en la comunidad.</p></aside>
+</section>
+
+<!-- TREN -->
+<section class="slide tren photo-slide" data-title="La primera hackatón arriba de un tren en LATAM">
+ <figure class="bleed shade-l"><img src="assets/fotos/hd/tren.jpg" alt="Tren Solar de la Quebrada al atardecer"></figure>
+ <img class="logo" src="assets/jujuydev-logo-white.webp" alt="jujuy.dev"><div class="kicker">Lo que viene</div>
+ <div class="copy">
+  <div class="mono">SpaceX AI Hackathon Argentina</div>
+  <h2 class="display">La primera hackatón<br>arriba de un tren<br>en <span class="hl">LATAM</span></h2>
+  <div class="sub">A bordo del <b>Tren Solar de la Quebrada</b>.</div>
+ </div>
+ <figure class="ticket step" data-step="1"><img src="assets/fotos/hd/ticket.jpg" alt="Ticket de la hackatón en el Tren Solar"></figure>
+ <div class="stats">
+  <div class="st step" data-step="2"><b>60–70</b><small>builders</small></div>
+  <div class="st step" data-step="3"><b>42 km</b><small>de Quebrada</small></div>
+  <div class="st step" data-step="4"><b>jujuy.dev × Argentina Space</b><small>organizan</small></div>
+ </div>
+ <aside class="notes"><p>Y lo que viene: la SpaceX AI Hackathon Argentina, la primera hackatón arriba de un tren en LATAM. Vamos a bordo del Tren Solar de la Quebrada, con 60 a 70 builders, 42 km, junto a Argentina Space.</p><p>(Fecha todavía sin confirmar: no la menciono.)</p></aside>
+</section>
+
+<!-- BUILDER HOUSE -->
+<section class="slide s15" data-title="Builder House">
+ <img class="logo" src="assets/jujuydev-logo.webp" alt="jujuy.dev"><div class="kicker">Builder House X</div>
+ <div class="left">
+  <div class="bar"></div><h2 class="display">Convivir en la<br><span class="hl">Builder House</span></h2>
+  <div class="lead step" data-step="1">Compartir la casa con builders me dio <b>una visión que va más allá de la comunidad</b>.</div>
+ </div>
+ <div class="orb"></div><img class="llama" src="assets/jujuydev-llama-hd.webp" alt="" style="right:40px;bottom:0;height:430px">
+ <aside class="notes"><p>Estos días en la Builder House X, conviviendo con builders, me dieron una visión que va más allá de la comunidad.</p></aside>
+</section>
+
+<!-- REFERENTES -->
+<section class="slide s16 dark" data-title="Acá están mis referentes">
+ <img class="logo" src="assets/jujuydev-logo-white.webp" alt="jujuy.dev" style="filter:none">
+ <div class="orb"></div>
+ <div class="q">
+  <div class="mono">Builder House X · Salta</div>
+  <h2 class="display">Acá están mis<br><span class="hl">referentes</span></h2>
+  <div class="lead step" data-step="1">Y eso me da <b>más hambre de seguir</b>.</div>
+ </div>
+ <aside class="notes"><p>Y acá, en esta casa, están mis referentes. Eso me da más hambre de seguir.</p></aside>
+</section>
+
+<!-- CIERRE -->
+<section class="slide p17 photo-slide" data-title="Cierre">
+ <figure class="bleed shade-l"><img src="assets/fotos/hd/cierre.jpg" alt="Comunidad jujuy.dev"></figure>
+ <img class="logo" src="assets/jujuydev-logo-white.webp" alt="jujuy.dev">
+ <div class="left">
+  <div class="bar"></div><h2 class="display">Esto recién<br><span class="hl">empieza.</span></h2>
+  <div class="sign"><span class="tag tag--solid">Franco Durán</span><span class="tag"><b>jujuy</b><span class="v" style="color:var(--violet-soft)">.dev</span></span></div>
+ </div>
+ <div class="qrs">
+  <figure class="qr"><img src="assets/qr/comunidad.svg" alt="QR a la comunidad de WhatsApp"><figcaption><b>Sumate a la comunidad</b><small>WhatsApp de jujuy.dev</small></figcaption></figure>
+  <figure class="qr"><img src="assets/qr/ig-jujuydev.svg" alt="QR al Instagram de jujuy.dev"><figcaption><b>IG de jujuy.dev</b><small>@jujuy.dev</small></figcaption></figure>
+ </div>
+ <aside class="notes"><p>Esto recién empieza. ¡Gracias!</p></aside>
+</section>
+
+ <div class="counter"></div><div class="progress"><i></i></div>
+</div>
+<script src="deck.js?v=1"></script></body></html>
